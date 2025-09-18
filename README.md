@@ -1,4 +1,8 @@
-```mermid
+# Team Management Flow Diagram
+
+This diagram shows the user flow for team management, including admin actions, invite flow, and safeguards.
+
+```mermaid
 graph TD
     subgraph Main User Flow
         A[User Navigates to Teams Tab] --> B{Is user in multiple teams?};
