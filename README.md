@@ -1,9 +1,8 @@
 # Team Management Flow Diagram
 
-This diagram shows the user flow for team management, including admin actions, invite flow, and safeguards.
-
 ```mermaid
 graph TD
+
     subgraph Main User Flow
         A[User Navigates to Teams Tab] --> B{Is user in multiple teams?};
         B -- Yes --> C[Display Team Switcher Dropdown];
@@ -44,6 +43,3 @@ graph TD
         K1 --> K2[Promote New User to Admin];
         K2 --> K3[Demote Old Admin to Regular];
     end
-
-    style A fill:#D6EAF8,stroke:#333,stroke-width:2px
-    style U fill:#D5F5E3,stroke:#333,stroke-width:2px
