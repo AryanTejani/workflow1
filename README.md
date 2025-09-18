@@ -34,17 +34,6 @@ graph TD
         S --> T[Send Magic Link Email to Invitee];
     end
 
-    subgraph Invitee Acceptance Flow
-        U[Invitee Clicks Magic Link] --> V[Lands on /invitation page];
-        V --> W{Is Invitee Logged In?};
-        W -- No --> X[Redirect to Login, then back to /invitation];
-        W -- Yes --> Y[Validate Token];
-        X --> Y;
-        Y -- Valid --> Z[Add User to Team in DB];
-        Y -- Invalid --> AA[Show Error & Redirect];
-        Z --> BB[Redirect to Projects Page];
-    end
-
     subgraph Management Safeguards
         J --> J1[Confirm Removal];
         J1 --> J2{Is this the last admin?};
